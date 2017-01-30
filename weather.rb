@@ -4,11 +4,7 @@ require 'barometer'
 #Get location input from user
 puts "Please enter location: "
 location = gets.chomp
-
-#Spit back entered location
 puts "	Fetching weather..."
-
-#initializes Imperial units
 
 #Fetches weather using Barometer gem
 barometer = Barometer.new(location)
@@ -21,9 +17,6 @@ tomorrow = Time.now.strftime('%d').to_i + 1
 
 #Current weather
 puts "	Current weather in #{location} is #{current_condition}."
-
-#Upcoming forecast header
-puts "Upcoming Forecast:"
 
 #Loop through each forecast day
 weather.forecast.each do |forecast|
